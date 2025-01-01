@@ -44,7 +44,7 @@
                 <FormattedString>
                     <local:HyperlinkUI Text="Blog" LinkUrl="https://www.kinsler.top"/>
                     <Span Text=" · "/>
-                    <local:HyperlinkUI Text="Github" LinkUrl="https://www.github.com"/>
+                    <local:HyperlinkUI Text="Github" LinkUrl="https://github.com/jiehuan-jason/DreamCatcher/"/>
                 </FormattedString>
             </Label.FormattedText>
         </Label>

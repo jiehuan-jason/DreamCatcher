@@ -10,4 +10,7 @@ public class Dream
     public string DreamText { get; set; } ="";
     public byte[] ImageData { get; set; } // 存储图片的二进制数据
     public bool IsImageGenerated { get; set; } = false;// 图片是否生成的标识
+    public string AIDreamTags { get; set; } = "";
+    public bool IsAnalyseGenerated { get; internal set; }
+    public string Analyse { get; internal set; }
 }
