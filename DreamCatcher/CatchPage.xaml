@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DreamCatcher.CatchPage"
+             Title="捕捉">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout Padding="20"
+                    Spacing="20">
+                <Label x:Name="title1"
+                        Text="醒了?"
+                        FontSize="36"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        IsVisible="False"/>
+                <Label x:Name="title2"
+                        Text="睡得怎么样？来记录一下你的梦境吧"
+                        FontSize="36"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        IsVisible="False"/>
+                <VerticalStackLayout x:Name="questionLayout"
+                        IsVisible="False">
+                    <!-- 问题列表 -->
+                    <HorizontalStackLayout x:Name="tagContainer"
+                            Spacing="10"/>
+                    <Label Text="具体形容一下昨晚的梦吧"
+                            FontSize="18"/>
+                    <Editor x:Name="editor"
+                            Placeholder="Enter your answer here"
+                            FontSize="16"
+                            HeightRequest="250"/>
+                    <Button x:Name="submitButton"
+                            Text="提交√"
+                            FontSize="18"
+                            CornerRadius="15"
+                            HorizontalOptions="Center"
+                            Margin="20,10,20,0"
+                            Clicked="SubmitButton_Clicked"/>
+                </VerticalStackLayout>
+                <ActivityIndicator x:Name="_loadingIndicator"
+                        IsRunning="False"
+                        IsVisible="False"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

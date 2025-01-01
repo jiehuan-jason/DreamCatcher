@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="DreamCatcher.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DreamCatcher"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <Tab Title="Catch"
+         Icon="{OnPlatform 'icon_catch.png', iOS='icon_catch_ios.png', MacCatalyst='icon_catch_ios.png'}">
+            <ShellContent
+                      ContentTemplate="{DataTemplate local:CatchPage}"/>
+        </Tab>
+
+        <Tab Title="Dreams"
+         Icon="{OnPlatform 'icon_list.png', iOS='icon_list_ios.png', MacCatalyst='icon_list_ios.png'}">
+            <ShellContent
+                      ContentTemplate="{DataTemplate local:DreamListPage}"/>
+        </Tab>
+
+        <Tab Title="Ask AI"
+         Icon="{OnPlatform 'icon_message.png', iOS='icon_message_ios.png', MacCatalyst='icon_message_ios.png'}">
+            <ShellContent
+                      ContentTemplate="{DataTemplate local:MessagePage}"/>
+        </Tab>
+
+        <Tab Title="About"
+         Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}">
+            <ShellContent
+                      ContentTemplate="{DataTemplate local:AboutPage}"/>
+        </Tab>
+    </TabBar>
+
+
+</Shell>

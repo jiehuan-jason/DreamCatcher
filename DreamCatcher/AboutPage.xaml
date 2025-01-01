@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DreamCatcher.AboutPage"
+             xmlns:local="clr-namespace:DreamCatcher"
+             Title="关于">
+    <VerticalStackLayout>
+        <Label 
+            Text="DreamCatcher by jiehuan"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="28"/>
+        <Label
+            Text="Version 0.0.1"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="22"
+            Margin="5"/>
+        <Label
+            Text="一款可以记录、查询、分析的AI梦境助手"
+            FontSize="18"
+            Margin="5"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
+        <Label Margin="5" InputTransparent="False" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="由GPT 4o mini与DALL·E 2强力驱动 "/>
+                    <local:HyperlinkUI Text="CloseAI" LinkUrl="https://www.closeai-asia.com/"/>
+                    <Span Text="提供API支持"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Margin="5" InputTransparent="False" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <local:HyperlinkUI Text="豆包MarsCode" LinkUrl="https://www.marscode.cn/"/>
+                    <Span Text="提供AI程序支持" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Margin="5" InputTransparent="False" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <local:HyperlinkUI Text="Blog" LinkUrl="https://www.kinsler.top"/>
+                    <Span Text=" · "/>
+                    <local:HyperlinkUI Text="Github" LinkUrl="https://www.github.com"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label
+            Text="©Copyright 2024-2025 jiehuan"
+            TextColor="Gray"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>

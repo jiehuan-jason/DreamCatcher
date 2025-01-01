@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DreamCatcher.DreamInfoPage"
+             Title="梦境信息">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label x:Name="DreamTitleLabel"
+                   Text=""
+                   FontSize="36"
+                   Margin="10,10,10,10"/>
+            <Label x:Name="DreamTimeLabel"
+                   Text=""
+                   FontSize="14"
+                   Margin="10,0,0,0"/>
+            <VerticalStackLayout Margin="10,10,10,10"
+                    Spacing="5">
+                <Label x:Name="DreamDescriptionLabel"
+                       Margin="10,10,10,10"
+                       Text="梦境描述"
+                       FontSize="24"/>
+                <Editor x:Name="DreamDescriptionEditor"
+                        Text=""
+                        FontSize="16"
+                        IsReadOnly="False"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout Margin="10,10,10,10"
+                Spacing="5">
+                <Label x:Name="DreamTagsLabel"
+                        Margin="10,10,10,10"
+                        Text="梦境标签"
+                        FontSize="24"/>
+                <Label x:Name="DreamTagsList"
+                        Text=""
+                        FontSize="16"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout x:Name="AIPicture"
+                                 Margin="10,10,10,10"
+                                 Spacing="5">
+                <HorizontalStackLayout>
+                    <Label x:Name="DreamAIPictureLabel"
+                           Text="AI生成梦境图片"
+                           FontSize="24"
+                           HorizontalOptions="Center"/>
+                    <Button x:Name="DreamAIPictureButton"
+                            Text="生成"
+                            Clicked="DreamAIPictureButton_Clicked"
+                            Margin="10,10,10,10"/>
+                    <ActivityIndicator x:Name="_loadingIndicator"
+                                       IsRunning="False"
+                                       IsVisible="False"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       Margin="10,10,10,10" />
+                </HorizontalStackLayout>
+                <Image x:Name="DreamAIPictureImage"
+                       Aspect="AspectFill"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Margin="10,10,10,10"/>
+                
+            </VerticalStackLayout>
+            <VerticalStackLayout x:Name="AIText"
+                     Margin="10,10,10,10"
+                     Spacing="5">
+                <HorizontalStackLayout>
+                    <Label x:Name="DreamAITextLabel"
+                           Text="AI分析梦境"
+                           FontSize="24"
+                           HorizontalOptions="Center"/>
+                    <Button x:Name="DreamAITextButton"
+                            Text="分析"
+                            Clicked="DreamAITextButton_Clicked"
+                            Margin="10,10,10,10"/>
+                    <ActivityIndicator x:Name="_loadingIndicatorText"
+                           IsRunning="False"
+                           IsVisible="False"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Margin="10,10,10,10" />
+                </HorizontalStackLayout>
+                <Editor x:Name="DreamAITextEditor"
+                    Text=""
+                    FontSize="16"
+                    IsReadOnly="True"
+                    AutoSize="TextChanges"
+                    IsVisible="False" />
+            </VerticalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Button x:Name="SaveButton"
+                        Text="保存"
+                        Clicked="SaveButton_Clicked"
+                        Margin="10,10,10,10"/>
+                <Button x:Name="DeleteButton"
+                        Text="删除"
+                        Background="Red"
+                        Clicked="DeleteButton_Clicked"
+                        Margin="10,10,10,10"/>
+            </HorizontalStackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

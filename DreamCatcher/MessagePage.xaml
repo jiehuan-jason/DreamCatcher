@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DreamCatcher.MessagePage"
+             Title="AI分析">
+    <ScrollView>
+        <VerticalStackLayout>
+        <VerticalStackLayout x:Name="DateChoosePanel" Margin="10,10,10,10" HorizontalOptions="Center">
+            <Label x:Name="DateChooseTitle" Text="选择起止日期" FontSize="18" Margin="10,10,10,0" />
+            <HorizontalStackLayout x:Name="DatePickerPart">
+                <DatePicker x:Name="FromDate" Margin="10,10,10,0" DateSelected="FromDateSelect"/>
+                <DatePicker x:Name="ToDate" Margin="10,10,10,0" DateSelected="ToDateSelect"/>
+            </HorizontalStackLayout>
+            <Button x:Name="Go"
+                    Clicked="Go_Clicked"
+                    Text="Go"
+                    VerticalOptions="End"
+                    HorizontalOptions="Fill"
+                    Margin="10,20,10,10"
+                    />
+        </VerticalStackLayout>
+        <VerticalStackLayout x:Name="DataShowPanel" IsVisible="False" Margin="10,10,10,10" HorizontalOptions="Center">
+            
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
